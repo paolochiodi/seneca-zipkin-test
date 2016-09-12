@@ -9,25 +9,25 @@ Clone this project and `npm install` (currently tested only in node 6)
 
 ## Run
 
-Run service1.js, service2.js and service3.js
-When all three are up and running run client.js.
-This will send the initial `a:1` message
+Run service1.js, service2.js and service3.js  
+When all three are up and running run client.js.  
+This will send the initial `a:1` message  
 
 ## Message Flow
 
-client.js calls `a:1`
-server1.js handles `a:1` and calls `b:1`
-server2.js handles `b:1` and calls `c:1`
-server3.js respond to `c:1` with `{hello:'world'}
+client.js calls `a:1`  
+server1.js handles `a:1` and calls `b:1`  
+server2.js handles `b:1` and calls `c:1`  
+server3.js respond to `c:1` with `{hello:'world'}`  
 
 ## Zipkin
 
-Go to (http://localhost:8080/)[http://localhost:8080/], choose service1 (or service2/service3) and click "find traces".
+Go to (http://localhost:8080/)[http://localhost:8080/], choose service1 (or service2/service3) and click "find traces".  
 You should see a list of traces. Click on one to see the details
 
 ## Info sent
 
-Currently we are only sending the basic default annotations: client send, server receive, server send and client receive.
+Currently we are only sending the basic default annotations: client send, server receive, server send and client receive.  
 The name of each span is the pattern of the action (for security and privacy reasons the entire message shouldn't be sent)
 
 ## Current Limitations
