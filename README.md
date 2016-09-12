@@ -3,7 +3,7 @@
 
 ## Setup
 
-Clone (openzipkin/docker-zipkin)[https://github.com/openzipkin/docker-zipkin] and run with `docker-compose up`
+Clone [openzipkin/docker-zipkin](https://github.com/openzipkin/docker-zipkin) and run with `docker-compose up`
 
 Clone this project and `npm install` (currently tested only in node 6)
 
@@ -22,7 +22,7 @@ server3.js respond to `c:1` with `{hello:'world'}`
 
 ## Zipkin
 
-Go to (http://localhost:8080/)[http://localhost:8080/], choose service1 (or service2/service3) and click "find traces".  
+Go to [http://localhost:8080/](http://localhost:8080/), choose service1 (or service2/service3) and click "find traces".  
 You should see a list of traces. Click on one to see the details.  
 
 ## Info sent
