@@ -6,6 +6,7 @@ var tracer = require('./tracer')
 seneca({
   tag: 'service1'
 })
+.use(tracer)
 .client({
   type:'http',
   port:3001,
@@ -17,10 +18,4 @@ seneca({
 })
 .add('a:1', function (msg, done) {
   this.act('b:1', done)
-})
-.use(tracer, {
-  pins: [
-    'a:1',
-    'b:1'
-  ]
 })
