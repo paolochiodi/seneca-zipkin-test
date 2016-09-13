@@ -9,8 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "seneca": "^3.0.0",
-    "zipkin": "^0.2.6",
-    "zipkin-transport-http": "^0.2.6"
+    "request": "^2.74.0",
+    "seneca": "^3.0.0"
   }
 }
