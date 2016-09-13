@@ -17,7 +17,8 @@ This will send the initial `a:1` message
 
 client.js calls `a:1`  
 server1.js handles `a:1` and calls `b:1`  
-server2.js handles `b:1` and calls `c:1`  
+server2.js handles `b:1` and calls `internal:1`  
+server2.js handles `internal:1` and calls (in parallel) `c:1` and `internal:2`  
 server3.js respond to `c:1` with `{hello:'world'}`  
 
 ## Zipkin
@@ -40,8 +41,8 @@ The name of each span is the pattern of the action (for security and privacy rea
 ## What's next (some ideas)
 
 - find better hooks into seneca that allow
-  - auto-discovery of actions to track
-  - in-process tracing
-  - better ways hide `tracer` data
-- explore possiblity to avoid zipkin-js
+  - ~~auto-discovery of actions to track~~
+  - ~~in-process tracing~~
+  - better ways to hide `tracer` data
+- ~~explore possiblity to avoid zipkin-js~~
 - measure performance costs of tracing?
